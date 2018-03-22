@@ -15,7 +15,7 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 	</head>
 	<body>
-		<!-- 
+		<!--
 			Skinning the Pi Kitchen Dashboard is easy. Simply create an HTML
 			page, ensure that the two sections marked REQUIRED appear,
 			and place elements onto the page to be auto-populated. The rest
@@ -95,6 +95,7 @@
 							<!-- Current date and time information -->
 							<div id="time"></div>
 							<div id="date"></div>
+              <div id="status">Maegan is <span id="answer"></span></div>
 						</td>
 					</tr>
 					<tr>
@@ -151,11 +152,28 @@
 
 		<!-- OPTIONAL custom icons -->
 		<!-- -->	<!--<script src="js/icons.js"></script>-->
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-firestore.js"></script>
+<script>
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyDrdgkoCUXKCk3cOF1ZHgkrhkpUeFUI-T4",
+  authDomain: "status-sign-ff890.firebaseapp.com",
+  databaseURL: "https://status-sign-ff890.firebaseio.com",
+  projectId: "status-sign-ff890",
+  storageBucket: "status-sign-ff890.appspot.com",
+  messagingSenderId: "785754681431"
+};
+firebase.initializeApp(config);
+firebase.firestore();
+</script>
 		<!-- OPTIONAL custom icons -->
 
 		<!-- REQUIRED template files -->
 		<!-- -->	<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
 		<!-- -->	<script src="../../bower_components/moment/min/moment.min.js"></script>
+
+<script src="js/main.js"></script>
 		<!-- -->	<script src="../../js/weather.js"></script>
 		<!-- REQUIRED template files -->
 	</body>
