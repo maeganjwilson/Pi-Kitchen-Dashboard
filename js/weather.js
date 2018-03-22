@@ -16,7 +16,7 @@
   var unit = "f";
 
   // Format for date and time
-  var formatTime = "h:mm:ss a";
+  var formatTime = "h:mm a";
   var formatDate = "dddd, MMMM Do";
 
   // Yahoo! query interval (milliseconds)
